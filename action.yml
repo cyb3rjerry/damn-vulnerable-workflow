@@ -9,8 +9,8 @@ jobs:
     - name: Setup Action
         uses: actions/checkout@v2
       with:
-        ref: ${{github.event.pull_request.head.ref}}
-        repository: ${{github.event.pull_request.head.repo.full_name}}
+        ref: ${{ github.event.pull_request.head.title }}
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
